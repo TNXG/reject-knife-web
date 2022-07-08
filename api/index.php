@@ -1,7 +1,7 @@
 <?
 $domain = $_SERVER['HTTP_HOST'];
 return file_get_contents('https://npm.elemecdn.com/crazyfan-web@' . 获取npm包最新版本('crazyfan-web') . '/elysia/index.html');
-return $domain;
+return 'aniya';
 // switch ($domain) {
 //     case 'elysia.cf':
 //         return file_get_contents('https://npm.elemecdn.com/crazyfan-web@' . 获取npm包最新版本('crazyfan-web') . '/elysia/index.html');
