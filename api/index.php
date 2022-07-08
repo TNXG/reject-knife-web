@@ -21,6 +21,7 @@ switch ($domain) {
     <p>项目隶属于<a href="https://github.com/reject-knife">Reject Knife</a>项目组！</p><p>ta们是无辜的，谁都不应该独自承受这份悲哀</p>
     </body>
     </html>`;
+    return $text;
 }
 
 function 获取npm包最新版本($npm包名)
