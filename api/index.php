@@ -1,14 +1,11 @@
 <?
 $domain = $_SERVER['HTTP_HOST'];
-
+return $domain;
 switch ($domain) {
-
     case 'elysia.cf':
         return file_get_contents('https://npm.elemecdn.com/crazyfan-web@' . 获取npm包最新版本('crazyfan-web') . '/elysia/index.html');
-
     case 'priestess.cf':
         return file_get_contents('https://npm.elemecdn.com/crazyfan-web@' . 获取npm包最新版本('crazyfan-web') . '/priestess/index.html');
-
     default:
         $text = `<!DOCTYPE html>
     <html>
