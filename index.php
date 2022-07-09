@@ -1,5 +1,9 @@
 <?
 $domain = $_SERVER['HTTP_HOST'];
+
+echo $domain;
+
+
 switch ($domain) {
     case 'elysia.cf':
         echo file_get_contents('https://npm.elemecdn.com/crazyfan-web@' . 获取npm包最新版本('crazyfan-web') . '/elysia/index.html');
