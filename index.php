@@ -1,14 +1,15 @@
 <?
 $domain = $_SERVER['HTTP_HOST'];
-
-echo $domain;
-
-
+$version = 获取npm包最新版本('crazyfan-web');
 switch ($domain) {
     case 'elysia.cf':
-        echo file_get_contents('https://npm.elemecdn.com/crazyfan-web@' . 获取npm包最新版本('crazyfan-web') . '/elysia/index.html');
+        $text = "<!-- PHP调试参数 \n \$domain:$domain \n \$version:$version -->\n";
+        echo $text . file_get_contents('https://npm.elemecdn.com/crazyfan-web@' . $version . '/elysia/index.html');
+        break;
     case 'priestess.cf':
-        echo file_get_contents('https://npm.elemecdn.com/crazyfan-web@' . 获取npm包最新版本('crazyfan-web') . '/priestess/index.html');
+        $text = "<!-- PHP调试参数 \n \$domain:$domain \n \$version:$version -->\n";
+        echo $text . file_get_contents('https://npm.elemecdn.com/crazyfan-web@' . $version . '/priestess/index.html');
+        break;
     default:
         $text = `<!DOCTYPE html>
     <html>
@@ -21,7 +22,8 @@ switch ($domain) {
     <p>项目隶属于<a href="https://github.com/reject-knife">Reject Knife</a>项目组！</p><p>ta们是无辜的，谁都不应该独自承受这份悲哀</p>
     </body>
     </html>`;
-    echo $text;
+        echo $text;
+        break;
 }
 
 function 获取npm包最新版本($npm包名)
