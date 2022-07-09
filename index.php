@@ -2,9 +2,9 @@
 $domain = $_SERVER['HTTP_HOST'];
 switch ($domain) {
     case 'elysia.cf':
-        return file_get_contents('https://npm.elemecdn.com/crazyfan-web@' . 获取npm包最新版本('crazyfan-web') . '/elysia/index.html');
+        echo file_get_contents('https://npm.elemecdn.com/crazyfan-web@' . 获取npm包最新版本('crazyfan-web') . '/elysia/index.html');
     case 'priestess.cf':
-        return file_get_contents('https://npm.elemecdn.com/crazyfan-web@' . 获取npm包最新版本('crazyfan-web') . '/priestess/index.html');
+        echo file_get_contents('https://npm.elemecdn.com/crazyfan-web@' . 获取npm包最新版本('crazyfan-web') . '/priestess/index.html');
     default:
         $text = `<!DOCTYPE html>
     <html>
@@ -17,7 +17,7 @@ switch ($domain) {
     <p>项目隶属于<a href="https://github.com/reject-knife">Reject Knife</a>项目组！</p><p>ta们是无辜的，谁都不应该独自承受这份悲哀</p>
     </body>
     </html>`;
-    return $text;
+    echo $text;
 }
 
 function 获取npm包最新版本($npm包名)
